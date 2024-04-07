@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--nav-bg: #ede9e2;
+	--white-text: #ffffff;
+	--orange-color: #ff951a;
+	--white-alt: rgba(255, 255, 255, 0.9);
+	--white-alt2: rgba(255, 255, 255, 0.4);
+	--widget-bg: rgba(0, 0, 0, 0.4);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(/images/macos-big-sur.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #3e3232;
+}

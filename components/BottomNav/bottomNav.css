@@ -1,0 +1,46 @@
+.bottom_nav {
+	width: fit-content;
+	height: fit-content;
+	background-color: var(--widget-bg);
+	backdrop-filter: blur(60px);
+	color: var(--white-text);
+	padding: 5px 20px;
+	position: fixed;
+	bottom: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 2.2rem;
+	border-radius: 12px;
+	z-index: 10;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2rem;
+	-webkit-box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+	box-shadow: -1px 7px 23px -6px rgba(0, 0, 0, 0.65);
+}
+
+.bottom_nav-icon_container {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	transition: all 0.5s ease-in-out;
+	text-decoration: none;
+	color: var(--white-text);
+}
+
+.bottom_nav-icon_container i {
+	position: absolute;
+	cursor: pointer;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, 50%);
+	transition: all 0.5s ease-in-out;
+}
+
+.bottom_nav-icon_container i:hover {
+	font-size: 4rem;
+	transform: translate(-50%, 0%);
+	bottom: 0;
+}
