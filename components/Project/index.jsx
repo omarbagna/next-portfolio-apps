@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import {
 	Sheet,
 	SheetContent,
@@ -8,18 +10,34 @@ import {
 } from '@/components/ui/sheet';
 
 const Project = ({ title, desc, image, techStack = [], url = '#' }) => {
+	const [highlight, setHighlight] = useState(false);
+
+	const highlightSelection = () => {
+		setHighlight((prev) => !prev);
+	};
+
 	return (
-		<Sheet>
+		<Sheet onOpenChange={highlightSelection}>
 			<SheetTrigger>
-				<div className="flex flex-col justify-center items-center gap-1 w-28 cursor-pointer">
-					<span className="flex justify-center items-center p-1 rounded-md bg-gray-400/10 overflow-hidden">
+				<div
+					//onClick={highlightSelection}
+					className="flex flex-col justify-center items-center gap-1 w-28 cursor-pointer">
+					<span
+						className={`flex justify-center items-center p-1 rounded-md ${
+							highlight ? 'bg-gray-400/10' : ''
+						} overflow-hidden`}>
 						<img
 							className="w-20 object-contain"
 							src="/images/folder.png"
 							alt=""
 						/>
 					</span>
-					<h2>{title}</h2>
+					<h2 className="text-sm">
+						<span
+							className={` ${highlight ? 'bg-blue-500 text-white w-fit' : ''}`}>
+							{title}
+						</span>
+					</h2>
 				</div>
 			</SheetTrigger>
 			<SheetContent>
