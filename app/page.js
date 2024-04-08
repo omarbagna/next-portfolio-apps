@@ -115,27 +115,6 @@ const projectItems = [
 			},
 		],
 	},
-	{
-		title: 'Digital Clock',
-		desc: 'A dynamic digital clock application designed with HTML, JavaScript, and CSS. Witness time unfolding in real-time, displayed in crisp digital format.',
-		image: '/images/digital-clock.jpg',
-		url: '/digital-clock',
-		techStack: [
-			{
-				icon: <i class="bx bxl-html5"></i>,
-				name: 'HTML5',
-			},
-
-			{
-				icon: <i class="bx bxl-css3"></i>,
-				name: 'CSS3',
-			},
-			{
-				icon: <i class="bx bxl-javascript"></i>,
-				name: 'JavaScript',
-			},
-		],
-	},
 ];
 
 export default function Home() {
