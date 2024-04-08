@@ -7,7 +7,7 @@ import {
 	SheetTrigger,
 } from '@/components/ui/sheet';
 
-const Project = ({ title, desc, image, url = '#' }) => {
+const Project = ({ title, desc, image, techStack = [], url = '#' }) => {
 	return (
 		<Sheet>
 			<SheetTrigger>
@@ -28,6 +28,20 @@ const Project = ({ title, desc, image, url = '#' }) => {
 				</SheetHeader>
 				<div className="w-full flex flex-col justify-start items-start gap-3 mt-6">
 					<p>{desc}</p>
+
+					<div className="w-full flex flex-col justify-start items-start gap-2">
+						<h3 className="font-medium text-xl">Tech Stack</h3>
+						<div className="w-full flex justify-start items-center gap-2 flex-wrap">
+							{techStack.map(({ icon, name }, index) => (
+								<div
+									key={index}
+									className="w-fit flex flex-col justify-start items-center text-5xl text-blue-500 gap-0">
+									{icon}
+									<span className="text-xs text-gray-600">{name}</span>
+								</div>
+							))}
+						</div>
+					</div>
 
 					<img
 						className="rounded-md overflow-hidden object-contain w-full"
